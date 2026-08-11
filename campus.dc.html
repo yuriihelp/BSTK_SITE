@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="styles.css">
+<script src="./image-slot.js"></script>
+<style>
+  body{-webkit-font-smoothing:antialiased}
+  a{color:var(--color-accent-700)}
+  a:hover{color:var(--color-accent-900)}
+</style>
+</helmet>
+
+<div style="background:var(--color-bg);color:var(--color-text);min-height:100%">
+
+<div style="border-bottom:1px solid var(--color-divider)">
+  <header class="nav" style="max-width:1240px;margin:0 auto;flex-wrap:wrap">
+    <a href="index.dc.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+      <img src="assets/logo.png" alt="Логотип БСТК" style="height:42px;width:auto;flex:none"/>
+      <span style="font-size:15px;line-height:1.15">Бугульминский<br>строительно-технический колледж</span>
+    </a>
+    <a href="about.dc.html">О колледже</a>
+    <a href="programs.dc.html">Специальности</a>
+    <a href="admission.dc.html">Приёмная комиссия</a>
+    <a href="campus.dc.html" aria-current="page">Студентам</a>
+    <a href="news.dc.html">Новости</a>
+    <a href="contacts.dc.html">Контакты</a>
+    <a href="sveden.dc.html">Сведения об ОО</a>
+    <button id="a11y-toggle" type="button" class="btn btn-secondary" title="Версия для слабовидящих" aria-label="Версия для слабовидящих" style="padding:6px 10px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+    </button>
+    <a href="admission.dc.html#form" class="btn btn-primary">Подать заявку</a>
+  </header>
+</div>
+
+<section style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6) var(--space-6)">
+  <span class="tag tag-accent">Студентам</span>
+  <h1 style="margin-top:var(--space-4);max-width:24ch">Общежитие и студенческая жизнь</h1>
+  <p style="font-size:16px;opacity:0.85;max-width:60ch">Для студентов из других населённых пунктов есть общежитие. Помимо учёбы — спорт, творчество и конкурсы профессионального мастерства.</p>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:0 var(--space-6) var(--space-8)">
+  <h6 style="color:var(--color-accent-700);margin-bottom:var(--space-3)">Общежитие</h6>
+  <h2 style="margin-bottom:var(--space-4)">Свежий ремонт и обновлённые условия</h2>
+  <p style="opacity:0.85;font-size:15px;max-width:70ch;margin-bottom:var(--space-6)">В общежитии колледжа завершён капитальный ремонт: обновлены вентилируемый фасад и утепление здания, переложены коридоры и санузлы, обновлено оснащение кухонной зоны и мест общего пользования. Условия для студентов стали современные и комфортные.</p>
+
+  <div style="display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:var(--space-3)">
+    <button id="dorm-prev" type="button" class="carousel-nav-btn" aria-label="Предыдущее фото"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button id="dorm-next" type="button" class="carousel-nav-btn" aria-label="Следующее фото"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m9 18 6-6-6-6"/></svg></button>
+  </div>
+  <div id="dorm-track" class="carousel-track" style="margin-bottom:var(--space-6)">
+    <figure style="margin:0;flex:0 0 340px">
+      <div class="blueprint" style="aspect-ratio:4/3;width:100%;overflow:hidden"><img src="assets/dorm-facade.jpg" alt="Фасад общежития после ремонта" style="width:100%;height:100%;object-fit:cover"/></div>
+      <figcaption>Фасад после ремонта</figcaption>
+    </figure>
+    <figure style="margin:0;flex:0 0 340px">
+      <div class="blueprint" style="aspect-ratio:4/3;width:100%;overflow:hidden"><img src="assets/dorm-corridor.jpg" alt="Коридор общежития" style="width:100%;height:100%;object-fit:cover"/></div>
+      <figcaption>Коридор</figcaption>
+    </figure>
+    <figure style="margin:0;flex:0 0 340px">
+      <div class="blueprint" style="aspect-ratio:4/3;width:100%;overflow:hidden"><img src="assets/dorm-kitchen.jpg" alt="Кухонная зона общежития" style="width:100%;height:100%;object-fit:cover"/></div>
+      <figcaption>Кухонная зона</figcaption>
+    </figure>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-4)">
+    <div class="card blueprint elev-sm card-hover" style="padding:var(--space-4)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+      <div class="card-title">Новый вентилируемый фасад</div>
+      <p class="card-body">Здание утеплено и обновлено снаружи — стало теплее и современнее.</p>
+    </div>
+    <div class="card blueprint elev-sm card-hover" style="padding:var(--space-4)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+      <div class="card-title">Обновлённая кухонная зона</div>
+      <p class="card-body">Новое оборудование и мебель на каждом этаже общежития.</p>
+    </div>
+    <div class="card blueprint elev-sm card-hover" style="padding:var(--space-4)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><path d="M2 12h20"/><path d="M6 8h.01"/><path d="M2 4h20v16H2Z"/></svg>
+      <div class="card-title">Светлые коридоры</div>
+      <p class="card-body">Новое освещение, кафель и отделка помещений.</p>
+    </div>
+    <div class="card blueprint elev-sm card-hover" style="padding:var(--space-4)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>
+      <div class="card-title">Кухонный инвентарь</div>
+      <p class="card-body">Установлены новые раковины и современное кухонное оборудование на этажах.</p>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:0 var(--space-6) var(--space-8)">
+  <h2 style="margin-bottom:var(--space-6)">Условия для студентов</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-4)">
+    <div class="card blueprint elev-sm card-hover" style="padding:var(--space-4)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/></svg>
+      <div class="card-title">Общежитие</div>
+      <p class="card-body">Место для проживания на весь период очного обучения.</p>
+    </div>
+    <div class="card blueprint elev-sm card-hover" style="padding:var(--space-4)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+      <div class="card-title">Стипендия</div>
+      <p class="card-body">Выплачивается студентам очной формы по успеваемости.</p>
+    </div>
+    <div class="card blueprint elev-sm card-hover" style="padding:var(--space-4)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+      <div class="card-title">Отсрочка от армии</div>
+      <p class="card-body">Предоставляется при очном обучении, поступившим впервые.</p>
+    </div>
+    <div class="card blueprint elev-sm card-hover" style="padding:var(--space-4)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div class="card-title">Спортивные секции</div>
+      <p class="card-body">Занятия в спортивном зале колледжа, соревнования между группами.</p>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+  <section style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:minmax(260px,0.9fr) minmax(260px,1.1fr);gap:var(--space-8)">
+    <div>
+      <h6 style="color:var(--color-accent-700)">Практика и конкурсы</h6>
+      <h2>Готовим к конкурсам профессионального мастерства</h2>
+    </div>
+    <p style="opacity:0.85;align-self:center">На базе колледжа работает специализированный центр компетенций по строительным профессиям — студенты тренируются и участвуют в конкурсах профмастерства на современном оборудовании.</p>
+  </section>
+</div>
+
+<section style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6);text-align:center">
+  <h2>Больше о жизни колледжа — в нашей группе</h2>
+  <p style="opacity:0.85;max-width:52ch;margin:0 auto var(--space-6)">Фото с занятий, мероприятия и объявления для студентов публикуются в сообществе ВКонтакте.</p>
+  <a href="https://vk.ru/bugstk" target="_blank" rel="noopener" class="btn btn-primary" style="padding:var(--space-3) var(--space-6);font-size:15px">Открыть группу ВКонтакте</a>
+</section>
+
+<footer style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-8)">
+    <div>
+      <div class="nav-brand" style="margin-bottom:var(--space-3)">БСТК</div>
+      <p class="text-muted" style="font-size:13px;max-width:280px">ГАПОУ «Бугульминский строительно-технический колледж».</p>
+    </div>
+    <div>
+      <h6 style="margin-bottom:var(--space-3)">Разделы</h6>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+        <a href="about.dc.html">О колледже</a>
+        <a href="programs.dc.html">Специальности</a>
+        <a href="admission.dc.html">Приёмная комиссия</a>
+        <a href="news.dc.html">Новости</a>
+        <a href="sveden.dc.html">Сведения об ОО</a>
+      </div>
+    </div>
+    <div>
+      <h6 style="margin-bottom:var(--space-3)">Контакты</h6>
+      <address style="font-style:normal;font-size:14px;display:flex;flex-direction:column;gap:10px">
+        <a href="contacts.dc.html" style="color:inherit">ул. Владимира Ленина, 127, Бугульма</a>
+        <a href="tel:+788594467242" style="color:inherit">+7 (85594) 4-67-42</a>
+      </address>
+    </div>
+    <div>
+      <h6 style="margin-bottom:var(--space-3)">Мы в соцсетях</h6>
+      <a href="https://vk.ru/bugstk" target="_blank" rel="noopener" class="btn btn-secondary">Группа ВКонтакте</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid var(--color-divider)">
+    <div style="max-width:1240px;margin:0 auto;padding:var(--space-3) var(--space-6);font-size:12px" class="text-muted">© 2026 ГАПОУ «БСТК». ИНН 1645005436 · ОГРН 1021601765701</div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    var a11yBtn = document.getElementById('a11y-toggle');
+    if (a11yBtn) {
+      if (localStorage.getItem('bstk-a11y') === '1') document.documentElement.classList.add('a11y-mode');
+      a11yBtn.addEventListener('click', function () {
+        document.documentElement.classList.toggle('a11y-mode');
+        localStorage.setItem('bstk-a11y', document.documentElement.classList.contains('a11y-mode') ? '1' : '0');
+      });
+    }
+    var track = document.getElementById('dorm-track');
+    var prevBtn = document.getElementById('dorm-prev');
+    var nextBtn = document.getElementById('dorm-next');
+    if (track && prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', function () { track.scrollBy({ left: -360, behavior: 'smooth' }); });
+      nextBtn.addEventListener('click', function () { track.scrollBy({ left: 360, behavior: 'smooth' }); });
+    }
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

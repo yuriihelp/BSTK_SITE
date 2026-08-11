@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body{-webkit-font-smoothing:antialiased}
+  a{color:var(--color-accent-700)}
+  a:hover{color:var(--color-accent-900)}
+</style>
+</helmet>
+
+<div style="background:var(--color-bg);color:var(--color-text);min-height:100%">
+
+<div style="border-bottom:1px solid var(--color-divider)">
+  <header class="nav" style="max-width:1240px;margin:0 auto;flex-wrap:wrap">
+    <a href="index.dc.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+      <img src="assets/logo.png" alt="Логотип БСТК" style="height:42px;width:auto;flex:none"/>
+      <span style="font-size:15px;line-height:1.15">Бугульминский<br>строительно-технический колледж</span>
+    </a>
+    <a href="about.dc.html">О колледже</a>
+    <a href="programs.dc.html">Специальности</a>
+    <a href="admission.dc.html">Приёмная комиссия</a>
+    <a href="campus.dc.html">Студентам</a>
+    <a href="news.dc.html" aria-current="page">Новости</a>
+    <a href="contacts.dc.html">Контакты</a>
+    <a href="sveden.dc.html">Сведения об ОО</a>
+    <button id="a11y-toggle" type="button" class="btn btn-secondary" title="Версия для слабовидящих" aria-label="Версия для слабовидящих" style="padding:6px 10px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+    </button>
+    <a href="admission.dc.html#form" class="btn btn-primary">Подать заявку</a>
+  </header>
+</div>
+
+<section style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6) var(--space-6)">
+  <span class="tag tag-accent">Новости и объявления</span>
+  <h1 style="margin-top:var(--space-4);max-width:24ch">Новости колледжа</h1>
+  <p style="font-size:16px;opacity:0.85;max-width:56ch">Главный канал новостей колледжа — сообщество ВКонтакте: там быстрее появляются объявления, фото и результаты конкурсов.</p>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:0 var(--space-6) var(--space-8)">
+  <a href="https://vk.ru/bugstk" target="_blank" rel="noopener" class="blueprint" style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-6);padding:var(--space-6);flex-wrap:wrap;text-decoration:none;color:inherit;background:var(--color-surface)">
+    
+    <div style="display:flex;align-items:center;gap:var(--space-4)">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent);flex:none"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+      <div>
+        <div class="card-title">Сообщество «БСТК» ВКонтакте</div>
+        <div class="text-muted" style="font-size:13px">Актуальные новости, объявления приёмной комиссии и фотоотчёты</div>
+      </div>
+    </div>
+    <span class="btn btn-primary">Перейти в VK</span>
+  </a>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:0 var(--space-6) var(--space-8)">
+  <h2 style="margin-bottom:var(--space-2)">Разделы новостей</h2>
+  <p class="text-muted" style="margin-bottom:var(--space-6);max-width:56ch">Лента с этой страницы пополняется по мере публикаций. Пока — ориентируйтесь по темам ниже или смотрите группу ВКонтакте.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-4)">
+    <div class="card blueprint" style="padding:var(--space-4);border-style:dashed">
+      <span class="tag tag-neutral">Приём</span>
+      <div class="card-title" style="margin-top:var(--space-2);opacity:0.6">Новости приёмной кампании</div>
+    </div>
+    <div class="card blueprint" style="padding:var(--space-4);border-style:dashed">
+      <span class="tag tag-neutral">Мероприятия</span>
+      <div class="card-title" style="margin-top:var(--space-2);opacity:0.6">Конкурсы и мероприятия</div>
+    </div>
+    <div class="card blueprint" style="padding:var(--space-4);border-style:dashed">
+      <span class="tag tag-neutral">Студенческая жизнь</span>
+      <div class="card-title" style="margin-top:var(--space-2);opacity:0.6">Спорт, творчество, практика</div>
+    </div>
+  </div>
+</section>
+
+<footer style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-8)">
+    <div>
+      <div class="nav-brand" style="margin-bottom:var(--space-3)">БСТК</div>
+      <p class="text-muted" style="font-size:13px;max-width:280px">ГАПОУ «Бугульминский строительно-технический колледж».</p>
+    </div>
+    <div>
+      <h6 style="margin-bottom:var(--space-3)">Разделы</h6>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+        <a href="about.dc.html">О колледже</a>
+        <a href="programs.dc.html">Специальности</a>
+        <a href="admission.dc.html">Приёмная комиссия</a>
+        <a href="campus.dc.html">Студентам</a>
+        <a href="sveden.dc.html">Сведения об ОО</a>
+      </div>
+    </div>
+    <div>
+      <h6 style="margin-bottom:var(--space-3)">Контакты</h6>
+      <address style="font-style:normal;font-size:14px;display:flex;flex-direction:column;gap:10px">
+        <a href="contacts.dc.html" style="color:inherit">ул. Владимира Ленина, 127, Бугульма</a>
+        <a href="tel:+788594467242" style="color:inherit">+7 (85594) 4-67-42</a>
+      </address>
+    </div>
+    <div>
+      <h6 style="margin-bottom:var(--space-3)">Мы в соцсетях</h6>
+      <a href="https://vk.ru/bugstk" target="_blank" rel="noopener" class="btn btn-secondary">Группа ВКонтакте</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid var(--color-divider)">
+    <div style="max-width:1240px;margin:0 auto;padding:var(--space-3) var(--space-6);font-size:12px" class="text-muted">© 2026 ГАПОУ «БСТК». ИНН 1645005436 · ОГРН 1021601765701</div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    var a11yBtn = document.getElementById('a11y-toggle');
+    if (a11yBtn) {
+      if (localStorage.getItem('bstk-a11y') === '1') document.documentElement.classList.add('a11y-mode');
+      a11yBtn.addEventListener('click', function () {
+        document.documentElement.classList.toggle('a11y-mode');
+        localStorage.setItem('bstk-a11y', document.documentElement.classList.contains('a11y-mode') ? '1' : '0');
+      });
+    }
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

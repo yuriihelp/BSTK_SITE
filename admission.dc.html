@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="styles.css">
+<style>
+  body{-webkit-font-smoothing:antialiased}
+  a{color:var(--color-accent-700)}
+  a:hover{color:var(--color-accent-900)}
+</style>
+</helmet>
+
+<div style="background:var(--color-bg);color:var(--color-text);min-height:100%">
+
+<div style="border-bottom:1px solid var(--color-divider)">
+  <header class="nav" style="max-width:1240px;margin:0 auto;flex-wrap:wrap">
+    <a href="index.dc.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+      <img src="assets/logo.png" alt="Логотип БСТК" style="height:42px;width:auto;flex:none"/>
+      <span style="font-size:15px;line-height:1.15">Бугульминский<br>строительно-технический колледж</span>
+    </a>
+    <a href="about.dc.html">О колледже</a>
+    <a href="programs.dc.html">Специальности</a>
+    <a href="admission.dc.html" aria-current="page">Приёмная комиссия</a>
+    <a href="campus.dc.html">Студентам</a>
+    <a href="news.dc.html">Новости</a>
+    <a href="contacts.dc.html">Контакты</a>
+    <a href="sveden.dc.html">Сведения об ОО</a>
+    <button id="a11y-toggle" type="button" class="btn btn-secondary" title="Версия для слабовидящих" aria-label="Версия для слабовидящих" style="padding:6px 10px">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+    </button>
+    <a href="admission.dc.html#form" class="btn btn-primary">Подать заявку</a>
+  </header>
+</div>
+
+<section style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6) var(--space-6)">
+  <span class="tag tag-accent">Приёмная комиссия</span>
+  <h1 style="margin-top:var(--space-4);max-width:26ch">Как поступить в БСТК</h1>
+  <p style="font-size:16px;opacity:0.85;max-width:60ch">Приём ведётся на базе 9 и 11 классов, на бюджетные и внебюджетные места. Точные сроки и количество мест на текущий год уточняйте у приёмной комиссии или в группе ВКонтакте.</p>
+</section>
+
+<section style="max-width:1240px;margin:0 auto;padding:0 var(--space-6) var(--space-8)">
+  <h2 style="margin-bottom:var(--space-6)">Порядок поступления</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-4)">
+    <div class="blueprint card-hover" style="padding:var(--space-4)">
+      <div style="font-family:var(--font-heading);font-size:22px;color:var(--color-accent-700)">01</div>
+      <div class="card-title" style="margin-top:6px;font-size:15px">Подать заявление</div>
+      <p class="card-body">Онлайн через форму на сайте, лично в приёмной комиссии или через портал госуслуг Татарстана (uslugi.tatarstan.ru).</p>
+    </div>
+    <div class="blueprint card-hover" style="padding:var(--space-4)">
+      <div style="font-family:var(--font-heading);font-size:22px;color:var(--color-accent-700)">02</div>
+      <div class="card-title" style="margin-top:6px;font-size:15px">Собрать документы</div>
+      <p class="card-body">Паспорт, аттестат, медсправка, фото — полный список ниже.</p>
+    </div>
+    <div class="blueprint card-hover" style="padding:var(--space-4)">
+      <div style="font-family:var(--font-heading);font-size:22px;color:var(--color-accent-700)">03</div>
+      <div class="card-title" style="margin-top:6px;font-size:15px">Пройти зачисление</div>
+      <p class="card-body">По результатам конкурса заявлений и среднего балла аттестата.</p>
+    </div>
+    <div class="blueprint card-hover" style="padding:var(--space-4)">
+      <div style="font-family:var(--font-heading);font-size:22px;color:var(--color-accent-700)">04</div>
+      <div class="card-title" style="margin-top:6px;font-size:15px">Приказ о зачислении</div>
+      <p class="card-body">Публикуется на сайте и в группе ВКонтакте колледжа.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" style="max-width:1240px;margin:0 auto;padding:0 var(--space-6) var(--space-8)">
+  <h2 style="margin-bottom:var(--space-2)">Сроки приёма документов на 2026/2027 учебный год</h2>
+  <p class="text-muted" style="margin-bottom:var(--space-6);max-width:60ch">Ориентировочные даты — уточняйте актуальные сроки в приёмной комиссии.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-4)">
+    <div class="blueprint card-hover" style="padding:var(--space-4)">
+      <div class="card-title" style="font-size:15px">с 20 июня 2026</div>
+      <p class="card-body">Начало приёма документов на очную форму обучения</p>
+    </div>
+    <div class="blueprint card-hover" style="padding:var(--space-4)">
+      <div class="card-title" style="font-size:15px">до 15 августа 2026</div>
+      <p class="card-body">Завершение приёма заявлений, предоставление оригинала документа об образовании</p>
+    </div>
+    <div class="blueprint card-hover" style="padding:var(--space-4)">
+      <div class="card-title" style="font-size:15px">до 25 ноября 2026</div>
+      <p class="card-body">Продление приёма документов на вакантные места (при наличии)</p>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" style="max-width:1240px;margin:0 auto;padding:0 var(--space-6) var(--space-8)">
+  <h2 style="margin-bottom:var(--space-2)">Специальности и количество мест</h2>
+  <p class="text-muted" style="margin-bottom:var(--space-6);max-width:60ch">Приём на базе 9 и 11 классов, очная форма обучения.</p>
+  <div style="overflow-x:auto">
+  <table class="table">
+    <thead><tr><th>Код</th><th>Программа</th><th>Срок обучения</th><th>Бюджет</th><th>Внебюджет</th></tr></thead>
+    <tbody>
+      <tr><td>08.02.01</td><td>Строительство и эксплуатация зданий и сооружений</td><td>3 г. 10 мес.</td><td>25</td><td>15</td></tr>
+      <tr><td>15.02.19</td><td>Сварочное производство</td><td>3 г. 10 мес.</td><td>25</td><td>15</td></tr>
+      <tr><td>23.02.03</td><td>Техническое обслуживание и ремонт автомобильного транспорта</td><td>3 г. 10 мес.</td><td>25</td><td>15</td></tr>
+      <tr><td>19.02.10</td><td>Технология продукции общественного питания</td><td>3 г. 10 мес.</td><td>20</td><td>15</td></tr>
+      <tr><td>29.02.10</td><td>Конструирование, моделирование и технология изделий лёгкой промышленности</td><td>3 г. 10 мес.</td><td>20</td><td>10</td></tr>
+      <tr><td>—</td><td>Мастер общестроительных работ</td><td>2 г. 10 мес.</td><td>25</td><td>—</td></tr>
+      <tr><td>—</td><td>Мастер отделочных строительных и декоративных работ</td><td>2 г. 10 мес.</td><td>25</td><td>—</td></tr>
+      <tr><td>—</td><td>Мастер столярно-плотничных работ</td><td>2 г. 10 мес.</td><td>15</td><td>—</td></tr>
+      <tr><td>—</td><td>Сварщик (электросварочные и газосварочные работы)</td><td>2 г. 10 мес.</td><td>15</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="text-muted" style="font-size:12px;margin-top:var(--space-3)">Контрольные цифры приёма утверждаются ежегодно — точное количество бюджетных мест уточняйте в приёмной комиссии.</p>
+</section>
+
+<div style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+  <section style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:minmax(260px,1fr) minmax(260px,1fr);gap:var(--space-8)">
+    <div class="blueprint" style="padding:var(--space-6)">
+      <h2 style="margin-bottom:var(--space-4)">Документы для поступления</h2>
+      <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+        <div style="display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:none;color:var(--color-accent);margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span>Заявление о приёме (заполняется в приёмной комиссии или онлайн)</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:none;color:var(--color-accent);margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span>Документ об образовании (аттестат за 9 или 11 класс)</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:none;color:var(--color-accent);margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span>Паспорт и его копия</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:none;color:var(--color-accent);margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span>Медицинская справка формы 086/У</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:none;color:var(--color-accent);margin-top:2px"><path d="M20 6 9 17l-5-5"/></svg><span>Фотографии 3×4 (6 шт.)</span></div>
+      </div>
+      <p class="text-muted" style="font-size:13px;margin-top:var(--space-4)">Точный перечень и сроки приёма уточняйте у приёмной комиссии — они могут меняться от года к году.</p>
+    </div>
+    <div class="blueprint" style="padding:var(--space-6)">
+      <h2 style="margin-bottom:var(--space-4)">Почему выбирают БСТК</h2>
+      <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+        <div style="display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:none;color:var(--color-accent);margin-top:2px"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg><span>220 бюджетных мест на 11 программах обучения</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:none;color:var(--color-accent);margin-top:2px"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/></svg><span>Общежитие для студентов из других городов</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:none;color:var(--color-accent);margin-top:2px"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg><span>Отсрочка от армии при очном обучении</span></div>
+        <div style="display:flex;gap:10px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="flex:none;color:var(--color-accent);margin-top:2px"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span>Практика на сварочном полигоне и в учебно-кулинарном цехе</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="form" style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:minmax(260px,0.9fr) minmax(320px,1.1fr);gap:var(--space-8)">
+  <div>
+    <h2>Онлайн-заявка на поступление</h2>
+    <p style="opacity:0.85;max-width:44ch">Оставьте контакты — приёмная комиссия свяжется с вами и расскажет о свободных местах и следующих шагах.</p>
+    <div style="margin-top:var(--space-6);display:flex;flex-direction:column;gap:var(--space-3)">
+      <a href="tel:+788594467242" style="display:flex;gap:10px;align-items:center;color:inherit;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 16.5 15H19a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2.5a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>+7 (85594) 4-67-42</a>
+      <a href="mailto:bug_stk@mail.ru" style="display:flex;gap:10px;align-items:center;color:inherit;text-decoration:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent)"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>bug_stk@mail.ru</a>
+    </div>
+  </div>
+  <div class="card blueprint elev-md" style="padding:var(--space-6)">
+    <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+      <div style="text-align:center;padding:var(--space-6) 0">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--color-accent);margin:0 auto var(--space-3)"><path d="M20 6 9 17l-5-5"/></svg>
+        <h3>Заявка отправлена</h3>
+        <p class="text-muted">Приёмная комиссия свяжется с вами в ближайшее время.</p>
+      </div>
+    </sc-if>
+    <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ handleSubmit }}" style="display:flex;flex-direction:column;gap:var(--space-4)">
+        <div class="field">
+          <label for="f-name">Фамилия Имя Отчество</label>
+          <input class="input" id="f-name" type="text" required="{{ true }}" placeholder="Иванов Иван Иванович"/>
+        </div>
+        <div class="field">
+          <label for="f-phone">Телефон</label>
+          <input class="input" id="f-phone" type="tel" required="{{ true }}" placeholder="+7 (___) ___-__-__"/>
+        </div>
+        <div class="field">
+          <label for="f-spec">Специальность</label>
+          <select class="input" id="f-spec">
+            <option>Строительство и эксплуатация зданий и сооружений</option>
+            <option>Сварочное производство</option>
+            <option>Техническое обслуживание и ремонт автотранспорта</option>
+            <option>Технология продукции общественного питания</option>
+            <option>Конструирование, моделирование и технология швейных изделий</option>
+            <option>Другое / не определился(ась)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-msg">Комментарий (необязательно)</label>
+          <textarea class="input" id="f-msg" rows="3" placeholder="Ваш вопрос приёмной комиссии"></textarea>
+        </div>
+        <label style="display:flex;gap:8px;align-items:flex-start;font-size:12px;opacity:0.8;cursor:pointer">
+          <input type="checkbox" required="{{ true }}" style="margin-top:2px"/>
+          <span>Даю согласие на обработку персональных данных в соответствии с Федеральным законом № 152-ФЗ</span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+      </form>
+    </sc-if>
+  </div>
+</section>
+
+<footer style="border-top:1px solid var(--color-divider)">
+  <div style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-8)">
+    <div>
+      <div class="nav-brand" style="margin-bottom:var(--space-3)">БСТК</div>
+      <p class="text-muted" style="font-size:13px;max-width:280px">ГАПОУ «Бугульминский строительно-технический колледж».</p>
+    </div>
+    <div>
+      <h6 style="margin-bottom:var(--space-3)">Разделы</h6>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+        <a href="about.dc.html">О колледже</a>
+        <a href="programs.dc.html">Специальности</a>
+        <a href="campus.dc.html">Студентам</a>
+        <a href="news.dc.html">Новости</a>
+        <a href="sveden.dc.html">Сведения об ОО</a>
+      </div>
+    </div>
+    <div>
+      <h6 style="margin-bottom:var(--space-3)">Контакты</h6>
+      <address style="font-style:normal;font-size:14px;display:flex;flex-direction:column;gap:10px">
+        <a href="contacts.dc.html" style="color:inherit">ул. Владимира Ленина, 127, Бугульма</a>
+        <a href="tel:+788594467242" style="color:inherit">+7 (85594) 4-67-42</a>
+      </address>
+    </div>
+    <div>
+      <h6 style="margin-bottom:var(--space-3)">Мы в соцсетях</h6>
+      <a href="https://vk.ru/bugstk" target="_blank" rel="noopener" class="btn btn-secondary">Группа ВКонтакте</a>
+    </div>
+  </div>
+  <div style="border-top:1px solid var(--color-divider)">
+    <div style="max-width:1240px;margin:0 auto;padding:var(--space-3) var(--space-6);font-size:12px" class="text-muted">© 2026 ГАПОУ «БСТК». ИНН 1645005436 · ОГРН 1021601765701</div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { submitted: false };
+  componentDidMount() {
+    var a11yBtn = document.getElementById('a11y-toggle');
+    if (a11yBtn) {
+      if (localStorage.getItem('bstk-a11y') === '1') document.documentElement.classList.add('a11y-mode');
+      a11yBtn.addEventListener('click', function () {
+        document.documentElement.classList.toggle('a11y-mode');
+        localStorage.setItem('bstk-a11y', document.documentElement.classList.contains('a11y-mode') ? '1' : '0');
+      });
+    }
+    var revealEls = document.querySelectorAll('.reveal');
+    if (revealEls.length) {
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('revealed'); io.unobserve(en.target); } });
+        }, { threshold: 0.15 });
+        revealEls.forEach(function (el) { io.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('revealed'); });
+      }
+    }
+  }
+  renderVals() {
+    return {
+      submitted: this.state.submitted,
+      notSubmitted: !this.state.submitted,
+      handleSubmit: (e) => {
+        e.preventDefault();
+        this.setState({ submitted: true });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
