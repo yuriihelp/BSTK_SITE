@@ -21,11 +21,15 @@
 <div style="background:var(--color-bg);color:var(--color-text);min-height:100%">
 
 <div style="border-bottom:1px solid var(--color-divider)">
-  <header class="nav" style="max-width:1240px;margin:0 auto;flex-wrap:wrap">
+  <header class="nav" style="max-width:1240px;margin:0 auto;position:relative">
     <a href="index.dc.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
       <img src="assets/logo.png" alt="Логотип БСТК" style="height:42px;width:auto;flex:none"/>
       <span style="font-size:15px;line-height:1.15">Бугульминский<br>строительно-технический колледж</span>
     </a>
+    <button id="nav-toggle" type="button" class="nav-toggle" aria-label="Меню" aria-expanded="false">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <div class="nav-links" id="nav-links">
     <a href="about.dc.html">О колледже</a>
     <a href="programs.dc.html">Специальности</a>
     <a href="admission.dc.html">Приёмная комиссия</a>
@@ -37,10 +41,11 @@
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
     </button>
     <a href="admission.dc.html#form" class="btn btn-primary">Подать заявку</a>
+    </div>
   </header>
 </div>
 
-<section style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6) var(--space-6);display:grid;grid-template-columns:minmax(280px,1.05fr) minmax(320px,0.95fr);gap:var(--space-8);align-items:center">
+<section class="split-grid" style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6) var(--space-6);align-items:center">
   <div>
     <span class="tag tag-accent" style="margin-bottom:var(--space-4)">ГАПОУ · готовим кадры с 1966 года</span>
     <h1 style="font-size:clamp(38px,5.2vw,64px);margin:var(--space-4) 0 var(--space-3);max-width:13ch">Строим карьеру с первого курса</h1>
@@ -74,7 +79,7 @@
 </section>
 
 <section class="reveal" style="max-width:1240px;margin:0 auto;padding:var(--space-8) var(--space-6)">
-  <div style="display:grid;grid-template-columns:minmax(240px,0.8fr) minmax(320px,1.2fr);gap:var(--space-8);align-items:start">
+  <div class="split-grid" style="align-items:start">
     <div>
       <h6 style="color:var(--color-accent-700)">01 · о колледже</h6>
       <h2>Колледж с историей — с 1966 года</h2>
@@ -323,6 +328,14 @@ class Component extends DCLogic {
       a11yBtn.addEventListener('click', function () {
         document.documentElement.classList.toggle('a11y-mode');
         localStorage.setItem('bstk-a11y', document.documentElement.classList.contains('a11y-mode') ? '1' : '0');
+      });
+    }
+    var navToggle = document.getElementById('nav-toggle');
+    var navLinks = document.getElementById('nav-links');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', function () {
+        var isOpen = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
     }
     var revealEls = document.querySelectorAll('.reveal');

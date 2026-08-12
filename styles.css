@@ -312,6 +312,37 @@ html.a11y-mode .duotone::after { opacity: 0.45; }
 .carousel-nav-btn { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--color-divider); background: var(--color-bg); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; transition: background .2s, border-color .2s; }
 .carousel-nav-btn:hover { background: var(--color-accent-100); border-color: var(--color-accent); }
 
+/* — responsive nav (site addition) — */
+.nav-toggle { display:none; align-items:center; justify-content:center; width:40px; height:40px; flex:none; background:transparent; border:1px solid var(--color-divider); border-radius:var(--radius-md); cursor:pointer; margin-left:auto; }
+.nav-toggle:hover { background:color-mix(in srgb, var(--color-text) 7%, transparent); }
+.nav-links { display:flex; align-items:center; gap:var(--space-3); flex-wrap:nowrap; }
+@media (max-width:1240px) {
+  .nav-toggle { display:flex; }
+  .nav-brand { margin-right:0; }
+  .nav-links {
+    display:none; position:absolute; top:100%; left:0; right:0;
+    flex-direction:column; align-items:stretch; gap:2px;
+    background:var(--color-bg); border-top:1px solid var(--color-divider); border-bottom:1px solid var(--color-divider);
+    padding:var(--space-3) var(--space-4); box-shadow:var(--shadow-md); z-index:30;
+  }
+  .nav-links.open { display:flex; }
+  .nav-links a { padding:10px 4px; font-size:15px; border-bottom:1px solid var(--color-divider); }
+  .nav-links .btn-secondary { align-self:flex-start; margin:4px 0; }
+  .nav-links .btn-primary { width:100%; margin-top:var(--space-2); padding:var(--space-3); }
+}
+
+/* — split two-column layout, collapses to one column on narrow screens (site addition) — */
+.split-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:var(--space-8); }
+
+/* — mobile spacing & type scale (site addition) — */
+@media (max-width:640px) {
+  h1 { font-size: clamp(30px, 8vw, 40px); }
+  h2 { font-size: clamp(24px, 6vw, 30px); }
+  h3 { font-size: 21px; }
+  .carousel-track > * { flex-basis: 240px; }
+  .table { font-size: 13px; }
+}
+
 /* — compliance accordion (site addition) — */
 .sveden-item { border-bottom: 1px solid var(--color-divider); }
 .sveden-item > summary { cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-4) 0; font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 17px; }
